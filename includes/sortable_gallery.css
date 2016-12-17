@@ -1,0 +1,110 @@
+body {
+	margin: 0px;
+	padding: 20px 10px 20px 30px;
+	font: 14px Arial;
+	color: #fff;
+	background-color: #000;
+}
+p { margin: 0px 0px 1em 0px; }
+a, a:visited { color: #00f; }
+.background { position: fixed; right: 0px; bottom: 0px}
+
+.title {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 70px;
+	height: 100%;
+	background: url(../images/title_01.png) no-repeat 0px 5px;
+}
+.gallery {
+	width: 80%;
+	margin: 0px auto;
+	position: relative;
+}
+.gallery .sorting {margin: 0px 15px 0px 0px; border: 1px solid #cccccc; 
+	background-color:  rgba(47,79,79, .3);
+}
+
+
+
+.bottomnav .link {
+	
+
+	padding: 3px 20px 3px 20px;
+	float: left;
+}
+.bottomnav .link a {
+	color: #fff; 
+	font-size: .85em;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 3px 20px 3px 20px;
+}
+
+
+.gallery .sorting span {padding: 0px 20px 0px 0px; color: #cccccc;  font-style: italic;}
+.gallery .sorting div {margin: 10px 0px 10px 10px;}
+.gallery .sorting a {
+	color: #fff; 
+	font-size: .85em;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 3px 20px 3px 20px;
+	background: url(../images/checkNormal.gif) no-repeat 0px 3px;
+}
+.gallery .sorting a:hover { color: #e5aa2c;}
+.gallery .sorting a.selected { color: #e5aa2c; background-image: url(../images/checkSelected.gif);}
+.gallery .photos .thumbnail_container {position: relative; }
+.gallery .photos .thumbnail_container a.thumbnail { position: absolute;}
+.gallery .photos .thumbnail_container a.thumbnail img { 
+	width: 75px;
+	height:  75px;
+	border: 1px solid #cccccc;
+}
+
+.clear_both { clear: both; line-height: 1px;}
+/*  // full screen functionality
+.expander {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 16px;
+    height: 16px;
+    padding: 4px;
+    background: white url(https://github.com/openxe/django-ace/diff_blob/1993c731626a44139b97d2d9fca8f4f4023f107a/django_ace/static/django_ace/img/expand.png?raw=true) center center no-repeat;
+    z-index: 99999;   
+    cursor: pointer;
+}
+*/
+/* Vertical */
+@media screen and (min-height: 50px) and (max-height: 520px) {
+	.title { background-image: url(../images/title_04.png); }
+}
+@media screen and (min-height: 521px) and (max-height: 700px) {
+	.title { background-image: url(../images/title_02.png); }
+}
+@media screen and (min-height: 701px) {
+	.title { background-image: url(../images/title_01.png); }
+}
+
+/* Horizontal  (takes precedence because it's last*/
+@media screen and (min-width: 50px) and (max-width: 500) {
+	.title { background-image: url(../images/title_04.png); }
+	body { padding: 5px 0px 0px 5px;}
+	.gallery {width: auto; margin-left: 35px;}
+	.gallery .sorting span { display: block; color: #e5aa2c; padding: 0px 0px 20px 0px; }
+	.gallery .sorting a {display: block; }
+}
+@media screen and (min-width: 501px) and (max-width: 960px) {
+	.title { background-image: url(../images/title_02.png); }
+	.gallery .sorting span { display: block; padding: 0px 0px 20px 0px;}
+	.gallery .sorting a {display: block; width: 35%; float: left; margin-bottom: 5px; }
+}
+@media screen and (min-width: 961px) { 
+	.title { background-image: url(../images/title_01.png); }
+	.gallery .sorting span {  padding: 0px 20px 20px 0px;}
+}
+
+
+

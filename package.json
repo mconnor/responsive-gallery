@@ -1,0 +1,22 @@
+{
+  "name": "responsivegallery",
+  "version": "1.0.0",
+  "description": "A responsive photo gallery",
+  "main": "main.js",
+  "dependencies": {
+    "install": "^0.8.2",
+    "jquery": "^1.11.1",
+    "npm": "^4.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fancybox",
+    "responsive",
+    "animation"
+  ],
+  "author": "Michael Connor",
+  "license": "ISC"
+}

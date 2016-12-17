@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Sortable Photo Gallery</title>
+
+		<meta id="viewport" name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0"/>
+
+
+		<link rel="stylesheet" type="text/css" href="includes/sortable_gallery.css"/>
+
+		<script type="text/javascript" src='node_modules/jquery/dist/jquery.min.js'></script>
+<!--
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+         full screen functionality
+            <script src="https://rawgithub.com/kayahr/jquery-fullscreen-plugin/master/jquery.fullscreen.js"></script>
+     -->
+		<!-- Add mousewheel plugin (this is optional) -->
+		<script type="text/javascript" src="fancybox/lib/jquery.mousewheel.js"></script>
+
+		<!-- Add fancyBox -->
+		<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+		<!-- Optionally add helpers - button, thumbnail and/or media -->
+		<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+		<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+
+<script type="text/javascript" src="includes/main.js"></script>
+
+
+	</head>
+	<body>
+
+		<div class="title"></div>
+		<div class="gallery">
+			<div class="sorting">
+				<div>
+					<span>Filter photos by</span>
+					<a class="sortLink selected" data-keyword="all" href="#">All</a>
+					<a class="sortLink" data-keyword="plants" href="#">plants</a>
+					<a class="sortLink" data-keyword="sculpture" href="#">sculpture</a>
+					<a class="sortLink" data-keyword="architecture" href="#">architecture</a>
+					<a class="sortLink" data-keyword="winter" href="#">Winter</a>
+					<a class="sortLink" data-keyword="people" href="#">People</a>
+					<a class="sortLink" data-keyword="youtube" href="#">youtube</a>
+					<a class="sortLink" data-keyword="vimeo" href="#">vimeo</a>
+					<div class="clear_both"></div>
+				</div>
+			</div>
+			<!-- end sorting -->
+			<div class="photos">
+				<div class="thumbnail_container">
+					<a class="thumbnail" data-keywords="youtube people" href="https://www.youtube.com/watch?v=BJKKaCRdyFo" title="Lost Vegas - Madagascar Institute"><img src="photos2/lostvegas.jpg"/></a>
+					<a class="thumbnail" data-keywords="vimeo people" href="http://vimeo.com/19403741" title="Dirty Finger Spinning at the Chicken Hut"><img src="photos2/conrad.jpg"/></a>
+					<a class="thumbnail" data-keywords="vimeo" href="http://vimeo.com/81040348" title="Backstreet Cultural Center - Mardis Gras 2013"><img src="photos2/backstreet.jpg"/></a>
+					<a class="thumbnail" title="cap for berry full size" href="photos/berrytree_fullsize.jpg" data-keywords="plants"><img src="photos/berrytree_thumbnail.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for carousel_fullsize." href="photos/carousel_fullsize.jpg" data-keywords="sculpture"><img src="photos/carousel_thumbnail.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for redplant_fullsize." href="photos/redplant_fullsize.jpg" data-keywords="plants"><img src="photos/redplant_thumbnail.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for eighteighteight_fullsize." href="photos/eighteighteight_fullsize.jpg" data-keywords="sculpture"><img src="photos/eighteighteight_thumbnail.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for evergreens_fullsize." href="photos/evergreens_fullsize.jpg" data-keywords="plants winter"><img src="photos/evergreens_thumbnail.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for fish_fullsize." href="photos/fish_fullsize.jpg" data-keywords="sculpure"><img src="photos/fish_thumbnail.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for lantern_fullsize." href="photos/lantern_fullsize.jpg" data-keywords="architecture"><img src="photos/lantern_thumbnail.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for pinwheel_fullsize." href="photos/pinwheel_fullsize.jpg" data-keywords="sculpture"><img src="photos/pinwheel_thumbnail.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for breckenridge_fullsize." href="photos/breckenridge_fullsize.jpg" data-keywords="winter plants"><img src="photos/breckenridge_thumbnail.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for neptune_fullsize." href="photos/neptune_fullsize.jpg" data-keywords="sculpture"><img src="photos/neptune_thumbnail.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for pumpkins_fullsize." href="photos/pumpkins_fullsize.jpg" data-keywords="plants"><img src="photos/pumpkins_thumbnail.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for snowbranch_fullsize." href="photos/snowbranch_fullsize.jpg" data-keywords="winter"><img src="photos/snowbranch_thumbnail.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for refraction_fullsize." href="photos/refraction_fullsize.jpg" data-keywords="sculpture"><img src="photos/refraction_thumbnail.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for rose_fullsize." href="photos/rose_fullsize.jpg" data-keywords="plants"><img src="photos/rose_thumbnail.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for sculpture_fullsize." href="photos/sculpture_fullsize.jpg" data-keywords="scuplture winter"><img src="photos/sculpture_thumbnail.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for stowe_fullsize." href="photos/stowe_fullsize.jpg" data-keywords="architecture winter"><img src="photos/stowe_thumbnail.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for nutcracker_fullsize." href="photos/nutcracker_fullsize.jpg" data-keywords="sculpture winter"><img src="photos/nutcracker_thumbnail.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for swatches_fullsize." href="photos/swatches_fullsize.jpg" data-keywords="sculpture"><img src="photos/swatches_thumbnail.jpg"/></a>
+					<a class="thumbnail" title="Victor - Rafting Guide - Tuva" href="photos2/people1.jpg" data-keywords="people"><img src="photos2/people1th.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for swatches_fullsize." href="photos2/people5.jpg" data-keywords="people"><img src="photos2/people5th.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for swatches_fullsize." href="photos2/people6.jpg" data-keywords="people"><img src="photos2/people6th.jpg"/></a>
+					<a class="thumbnail" title="The Whistler" href="photos2/people7.jpg" data-keywords="people"><img src="photos2/people7th.jpg"/></a>
+					<a class="thumbnail" title="People Talking on Corded Phones" href="photos2/people8.jpg" data-keywords="people"><img src="photos2/people8th.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for swatches_fullsize." href="photos2/people9.jpg" data-keywords="people"><img src="photos2/people9th.jpg"/></a>
+					<a class="thumbnail" title="Glamorous Damaris" href="photos2/people11.jpg" data-keywords="people"><img src="photos2/people11th.jpg"/></a>
+					<a class="thumbnail" title="Jason Engdahl at Coney Island" href="photos2/people12.jpg" data-keywords="people"><img src="photos2/people12th.jpg"/></a>
+					<a class="thumbnail" title="Sausage Queen" href="photos2/people13.jpg" data-keywords="people"><img src="photos2/people13th.jpg"/></a>
+					<a class="thumbnail" title="Man with Fishing Pole" href="photos2/people14.jpg" data-keywords="people"><img src="photos2/people14th.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for swatches_fullsize." href="photos2/people15.jpg" data-keywords="people"><img src="photos2/people15th.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for swatches_fullsize." href="photos2/people16.jpg" data-keywords="people"><img src="photos2/people16th.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for swatches_fullsize." href="photos2/people17.jpg" data-keywords="people"><img src="photos2/people17th.jpg"/></a>
+					<a class="thumbnail" title="Hardest Working Man in Showbiz" href="photos2/people18.jpg" data-keywords="people"><img src="photos2/people18th.jpg"/></a>
+					<a class="thumbnail" title="This is a caption for swatches_fullsize." href="photos2/people19.jpg" data-keywords="people"><img src="photos2/people19th.jpg"/></a>
+				</div>
+			</div>
+			<!-- end photos -->
+			<div class='bottomnav'>
+				<div class='link'>
+				<a class="fancybox-media" href="https://maps.google.com/maps?ie=UTF-8&q=The+Waypost&fb=1&gl=us&hq=waypost,&hnear=0x54950b0b7da97427:0x1c36b9e6f6d18591,Portland,+OR&cid=4792721921116557641&ei=Y--TUsiEO8z6oATauYHoCQ&ved=0CJQBEPwSMAk" title ="Portland Office">Our Office</a>
+				</div>
+				<div class='link'>
+					<a class="various" data-fancybox-type="iframe" href="http://rocketnumber9.org/foxyform.html">contact</a>
+				</div>
+			</div>
+			<!-- end bottomnav -->
+		</div>
+		<!-- end gallary -->
+
+		<!--</div>
+		<div class="debug-size" style="position:absolute; bottom: 0px; left: 5px;">debug size</div>
+		<div class="debug-remaindner" style="position:absolute; bottom: 25px; left: 5px;">debug remainder</div>
+-->
+
+<script>
+$( MYAPP.startMyApp );
+</script>
+
+	</body>
+</html>
