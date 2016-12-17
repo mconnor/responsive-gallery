@@ -1,7 +1,10 @@
 # responsive-gallery
-A responsive photo gallery using Jquery and Fancy Box.
+A responsive photo gallery using Jquery and [Fancy Box]
+[fancybox].
 
-This started as a tutorial on Lynda.com. I cleaned things up a bit.
+In began this in 2013
+
+This is from a a tutorial Lynda.com. I cleaned things up a bit.  I went back to see what my early js looked like.  I was horrified so i decided to clean things up a bit - and start moving all work to github for posterity sake.
 
 The js is now in a immediately-invoked function expression function.
 - Set up a jshint
@@ -11,3 +14,5 @@ The js is now in a immediately-invoked function expression function.
 Todo
 - move photos off of github
 - pull photos in via json
+
+[fancybox]: http://fancybox.net/
