@@ -34,23 +34,17 @@ var MYAPP = (function() {
         $('.gallery .sorting').css('margin-bottom', thumbnailSpacing + 'px');
         //$('.bottomnav .link').css('margin-bottom', thumbnailSpacing + 'px');
 
-        $('.thumbnail_container a.thumbnail').addClass('showMe').addClass('fancybox').attr('rel', 'group');
+        $('.thumbnail_container a.thumbnail')
+					.addClass('showMe').addClass('fancybox').attr('rel', 'group');
 
-        $('.thumbnail_container a.thumbnailVideo').addClass('showMe').addClass('fancybox-media').attr('rel', 'group');
+        $('.thumbnail_container a.thumbnailVideo')
+					.addClass('showMe').addClass('fancybox-media').attr('rel', 'group');
 
         positionThumbnails();
 
-        //setInterval('checkViewport()', 750);
-        //setInterval('checkViewport()', 750);
-
-        var funcName = checkViewport;
         setInterval(function() {
             return checkViewport();
         }, 750);
-        //  setInterval('funcName()', 750);
-        //	checkViewportInterval(checkViewport);
-        // could do a jquery resize
-
         $(".various").fancybox({
             maxWidth: 800,
             maxHeight: 600,
@@ -70,17 +64,6 @@ var MYAPP = (function() {
                 media: {}
             }
         });
-
-        /*
-		$('.fancybox-media').fancybox({
-			openEffect  : 'none',
-			closeEffect : 'none',
-			helpers : {
-				media : {}
-			}
-		});
-	*/
-
     };
 
     function sortThumbnails(keyword) {
@@ -98,9 +81,6 @@ var MYAPP = (function() {
                 }
 
             }
-
-            //console.log('sortThumbnails '  + thumbnailKeywords);
-
         });
 
         positionThumbnails();
@@ -123,15 +103,9 @@ var MYAPP = (function() {
         var thumbnailHeight = $('a.thumbnail img:first-child').outerHeight() + thumbnailSpacing;
         var maxCol = Math.floor(containerWidth / thumbnailWidth);
 
-				console.log('containerWidth ' + containerWidth);
-        console.log('thumbnailWidth ' + $('a.thumbnail img:first-child').outerWidth());
-				console.log('thumbnailHeight ' + $('a.thumbnail img:first-child').outerHeight());
-
         $('.thumbnail_container  a.thumbnail.showMe').each(function(index) {
             var remainder = (index % maxCol) / 100;
             var maxIndex = 0;
-            ///* debug */ $('.debug-remaindner').append(remainder + " -");
-//console.log('each');
             if (remainder === 0) {
                 if (index !== 0) {
                     thumbnailRow += thumbnailHeight;
@@ -213,10 +187,5 @@ var MYAPP = (function() {
         });
 
     }
-    // function checkViewportInterval() {
-    //     console.log('checkViewportInterval');
-    //     setInterval('checkViewport()', 750);
-    // }
-
     return {startMyApp: _startMyApp};
 })();
