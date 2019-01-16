@@ -2,20 +2,12 @@
   "name": "responsivegallery",
   "version": "1.0.0",
   "description": "A responsive photo gallery",
-  "main": "main.js",
-  "dependencies": {
-    "bulma": "^0.3.1",
-    "install": "^0.8.2",
-    "jquery": ">=3.0.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "includes/main.js",
   "keywords": [
     "fancybox",
     "responsive",
-    "animation"
+    "animation",
+    "es5"
   ],
   "author": "Michael Connor",
   "license": "ISC"
